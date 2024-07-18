@@ -49,14 +49,14 @@ ui <- fluidPage(
       # Horizontal line ----
       tags$hr(),
       
-      # Action button to model the data ----
-      actionButton("model", "Generate Linear Model"),
-      
       # Input: Display head or all ----
       radioButtons("disp", "Display",
                    choices = c(Head = "head",
                                All = "all"),
-                   selected = "head")
+                   selected = "head"),
+
+      # Action button to model the data ----
+      actionButton("model", "Generate Linear Model")
     ),
     
     # Show a plot of the scatter plot and linear model, and text output for coefficients
